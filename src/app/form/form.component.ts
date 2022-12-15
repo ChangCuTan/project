@@ -1,4 +1,6 @@
 import { Component, ɵsetClassMetadata } from '@angular/core';
+import { MatLabel } from '@angular/material/form-field';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
