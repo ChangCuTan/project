@@ -1,4 +1,4 @@
-
+<!-- 
 <form [formGroup]="profileForm"  (submit)="onSubmit()" > 
     <input type="text" name="Name" placeholder="Name" ngModel> 
     <br/> 
@@ -11,9 +11,8 @@
 
  <form action="">
 
- </form>
-<!-- 
-<form appearance="fill">
+ </form> -->
+ <!-- <mat-form-field appearance="fill">
     <mat-label>Input</mat-label>
     <input matInput>
   </mat-form-field>
@@ -28,3 +27,19 @@
     <mat-label>Textarea</mat-label>
     <textarea matInput></textarea>
   </mat-form-field> -->
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Name" value="">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+  </form>
+
+  <mat-slide-toggle>Toggle me!</mat-slide-toggle>
+
+  
+  

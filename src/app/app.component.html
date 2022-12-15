@@ -1,4 +1,49 @@
-
 <router-outlet>
-  <app-form></app-form>
+  <div *ngIf="!isUserFormSent">
+    <app-new-form (formSent)="onFormUserSent($event)"></app-new-form>
+  </div>
+  <div *ngIf="isUserFormSent && !isProductFormSent">
+    <app-product-form (formSent)="onFormProductSent($event)"></app-product-form>
+  </div>
+  <div *ngIf="isUserFormSent && isProductFormSent">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Completed Form</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+
+        <div class="row">
+
+          <div class="col">
+            Name : {{userData.name}}
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col">
+            Email : {{userData.emailAddress}}
+
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col">
+            Colour : {{productData.colour}}
+
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col">
+            Size : {{productData.size}}
+
+          </div>
+        </div>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
 </router-outlet>

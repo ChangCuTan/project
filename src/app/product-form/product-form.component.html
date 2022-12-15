@@ -1,0 +1,31 @@
+<form [formGroup]="productForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Product Form</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-radio-group formControlName="colour">
+            <mat-radio-button value="Red">Red</mat-radio-button>
+            <mat-radio-button value="Blue">Blue</mat-radio-button>
+            <mat-radio-button value="Green">Green</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-radio-group formControlName="size">
+            <mat-radio-button value="Small">Small</mat-radio-button>
+            <mat-radio-button value="Medium">Medium </mat-radio-button>
+            <mat-radio-button value="Large">Large</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Submit Product</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
